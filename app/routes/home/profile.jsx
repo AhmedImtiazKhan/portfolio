@@ -21,16 +21,19 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      I’m Ahmed Imtiaz Khan, currently based in Pakistan, working as an Software Engineer
+      at <Link href="https://www.teradata.com">Teradata Global Consultancy</Link>. My
+      projects span across machine learning, signal processing, and intelligent systems. I
+      specialize in healthcare diagnostics, industrial automation, and intelligent
+      systems. I enjoy blending coding skills with problem-solving to deliver impactful
+      solutions. If you’re curious about the tools and frameworks I work with, feel free
+      to check out my <Link href="/uses">uses page</Link>.
     </Text>
+
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      In my spare time, I enjoy exploring research in distributed systems, working on
+      machine learning projects, and playing video games. I’m always open to discussing
+      new ideas and collaborations, so feel free to reach out!
     </Text>
   </Fragment>
 );
