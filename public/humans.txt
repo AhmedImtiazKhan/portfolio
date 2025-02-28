@@ -1,7 +1,7 @@
-__  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
+   /\   
+  /  \  
+ / /\ \ 
+/_/  \_\
 
 The humans.txt file explains the team, technology,
 and graphic assets behind this site humanstxt.org.
@@ -10,7 +10,7 @@ _______________________________________________________________________________
 
 DESIGNER | デザイナー
 
-Hamish Williams
+Ahmed Imtiaz Khan
 Hand crafted design & web development
 
 Design tools:
@@ -18,14 +18,15 @@ Figma
 Photoshop
 Blender
 
-twitter.com/hamishmw
-github.com/hamishmw
+github.com/AhmedImtiazKhan
 
 _______________________________________________________________________________
 
 TECHNOLOGY | テクノロジー
 
 React
+Next
+C#
 Remix
 Three.js
 Framer Motion

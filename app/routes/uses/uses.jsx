@@ -35,7 +35,7 @@ export const Uses = () => {
         />
         <ProjectHeader
           title="Uses"
-          description="A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and code things. And yeah, that is a Johnny Mnemonic GIF in the background."
+          description="A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and code things. "
         />
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
@@ -55,12 +55,6 @@ export const Uses = () => {
                     far I haven’t found a non-Adobe product that’s as good. If anyone has
                     suggestions please <Link href="/contact">message me</Link>.
                   </ListItem>
-                  <ListItem>
-                    For any 3D models and video editing I use{' '}
-                    <Link href="https://www.blender.org/">Blender</Link>. Since 2.8 it’s
-                    become way simpler to use and in a lot of ways better than expensive
-                    paid tools like 3DS Max or Maya.
-                  </ListItem>
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
@@ -73,9 +67,9 @@ export const Uses = () => {
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    I use <Link href="https://vscodium.com/">VSCodium</Link> as my text
-                    editor, with the Tokyo Night theme and Operator Mono as my typeface of
-                    choice.
+                    I use{' '}
+                    <Link href="https://code.visualstudio.com/">Visual Studio Code</Link>{' '}
+                    as my text editor.
                   </ListItem>
                   <ListItem>
                     Firefox is my main browser for both development and general use.
@@ -101,14 +95,6 @@ export const Uses = () => {
                     <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
                     a great way to add spring animations to React and three.js.
                   </ListItem>
-                  <ListItem>
-                    For building and testing UI components in isolation I use{' '}
-                    <Link href="https://storybook.js.org/">Storybook</Link>. Check out the{' '}
-                    <Link href="https://storybook.hamishw.com">
-                      storybook for this website
-                    </Link>
-                    .
-                  </ListItem>
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
@@ -116,7 +102,7 @@ export const Uses = () => {
         </ProjectSection>
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
-            <ProjectTextRow stretch width="m">
+            {/* <ProjectTextRow stretch width="m">
               <ProjectSectionHeading>System</ProjectSectionHeading>
               <Table>
                 <TableBody>
@@ -158,7 +144,7 @@ export const Uses = () => {
                   </TableRow>
                 </TableBody>
               </Table>
-            </ProjectTextRow>
+            </ProjectTextRow> */}
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
