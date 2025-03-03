@@ -75,9 +75,18 @@ function ArticlesPost({ slug, frontmatter, timecode, index }) {
             {abstract}
           </Text>
           <div className={styles.postFooter}>
-            <Button secondary iconHoverShift icon="chevron-right" as="div">
-              Read article
+            <Button
+              secondary
+              iconHoverShift
+              icon="chevron-right"
+              as="a"
+              href="https://medium.com/@ahmed.imtiaz2000/unlocking-the-power-of-server-actions-in-next-js-simplified-full-stack-development-b41fd393b3de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read article dont
             </Button>
+
             <Text className={styles.timecode} size="s">
               {timecode}
             </Text>
