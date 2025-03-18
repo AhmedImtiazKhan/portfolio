@@ -7,6 +7,8 @@ import gamestackTexture from '~/assets/gamestack-login.jpg';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceTexture from '~/assets/slice-app.jpg';
+import sliceTextureTodoList from '~/assets/slice-todo-list.jpg';
+import sliceTextureTodoListLarge from '~/assets/slice-todo-list-large.jpg';
 import sprTextureLarge from '~/assets/free-scribe.jpg';
 import sprTexturePlaceholder from '~/assets/free-scribe.jpg';
 import sprTexture from '~/assets/free-scribe.jpg';
@@ -179,7 +181,7 @@ export const Home = () => {
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              srcSet: `${sliceTextureTodoList} 800w, ${sliceTextureTodoListLarge} 1920w`,
               placeholder: sliceTexturePlaceholder,
             },
           ],
