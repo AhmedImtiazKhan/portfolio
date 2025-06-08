@@ -91,7 +91,7 @@ export const Slice = () => {
               </ProjectSectionText>
               <ProjectSectionText>
                 Our solution was to allow users to be invited to a layer, where they can
-                see others’ annotations and make their own.
+                see others' annotations and make their own.
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
@@ -201,4 +201,4 @@ export const Slice = () => {
       <Footer />
     </Fragment>
   );
-};
+}; 

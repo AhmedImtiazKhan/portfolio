@@ -44,15 +44,8 @@ export const Uses = () => {
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    <Link href="https://www.figma.com">Figma</Link> is my primary tool for
-                    UI design these days. Made the switch from Sketch in 2020 and haven’t
-                    looked back. I’ve also created{' '}
-                    <Link href="https://www.figma.com/@hamish">a few plugins</Link> that
-                    you can install.
-                  </ListItem>
-                  <ListItem>
                     Any motion graphics I create are created in Adobe After Effects. So
-                    far I haven’t found a non-Adobe product that’s as good. If anyone has
+                    far I haven't found a non-Adobe product that's as good. If anyone has
                     suggestions please <Link href="/contact">message me</Link>.
                   </ListItem>
                 </List>
@@ -85,14 +78,14 @@ export const Uses = () => {
                     learning curve but you can do some really powerful stuff with it.
                   </ListItem>
                   <ListItem>
-                    For CSS I’ve used a myriad pre-processors and css-in-js solutions like
-                    styled-components, but these days I’m using vanilla CSS with{' '}
+                    For CSS I've used a myriad pre-processors and css-in-js solutions like
+                    styled-components, but these days I'm using vanilla CSS with{' '}
                     <Link href="https://postcss.org/">PostCSS</Link> to get upcoming CSS
                     features today.
                   </ListItem>
                   <ListItem>
                     For Javascript animations I use{' '}
-                    <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
+                    <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it's
                     a great way to add spring animations to React and three.js.
                   </ListItem>
                 </List>
@@ -132,7 +125,7 @@ export const Uses = () => {
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Laptop</TableHeadCell>
-                    <TableCell>Macbook Pro 14″</TableCell>
+                    <TableCell>Macbook Pro 14"</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Headphones</TableHeadCell>

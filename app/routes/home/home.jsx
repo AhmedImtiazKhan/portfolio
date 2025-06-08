@@ -155,7 +155,7 @@ export const Home = () => {
         title="Swolley"
         description="Gym App to make customized gym work outs."
         buttonText="View project"
-        buttonLink="/sliceprojects/"
+        buttonLink="https://cool-gym-workout-site.netlify.app/"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -167,15 +167,15 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
-        id="project-3"
+      {/* <ProjectSummary
+        id="project-4"
         sectionRef={projectFour}
-        visible={visibleSections.includes(projectThree.current)}
-        index={3}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
         title="Swolenormous"
         description="Gym App to make customized gym work outs."
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="https://cool-gym-workout-site.netlify.app/"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -186,7 +186,7 @@ export const Home = () => {
             },
           ],
         }}
-      />
+      /> */}
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
