@@ -1,7 +1,7 @@
 @layer components {
   .monogram {
-    fill: var(--textTitle);
-    transition: fill var(--durationL) ease;
+    color: var(--textTitle); /* ✅ Set color for text fill */
+    transition: color var(--durationL) ease;
   }
 
   .highlight {
