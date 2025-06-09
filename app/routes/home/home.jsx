@@ -53,13 +53,12 @@ export const Home = () => {
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
   const projectOne = useRef();
-  const projectTwo = useRef();
   const projectThree = useRef();
   const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -107,8 +106,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="Transcription and translation with open ai models"
-        description="React web based transcription & translation app that uses web workers to run ML models in the browser
-"
+        description="React web based transcription & translation app that uses web workers to run ML models in the browser"
         buttonText="View project"
         buttonLink="https://free-scribe-live-ml.netlify.app/"
         model={{
@@ -124,34 +122,9 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-2"
-        alternate
-        sectionRef={projectTwo}
-        visible={visibleSections.includes(projectTwo.current)}
-        index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
-        model={{
-          type: 'phone',
-          alt: 'App login screen',
-          textures: [
-            {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-3"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
-        index={3}
+        index={2}
         title="Swolley"
         description="Gym App to make customized gym work outs."
         buttonText="View project"
@@ -167,15 +140,15 @@ export const Home = () => {
           ],
         }}
       />
-      {/* <ProjectSummary
-        id="project-4"
+      <ProjectSummary
+        id="project-3"
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
-        index={4}
-        title="Swolenormous"
-        description="Gym App to make customized gym work outs."
+        index={3}
+        title="Todolist"
+        description="AI integrated todo list"
         buttonText="View project"
-        buttonLink="https://cool-gym-workout-site.netlify.app/"
+        buttonLink="https://cooltodolistaik.netlify.app/"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -186,7 +159,7 @@ export const Home = () => {
             },
           ],
         }}
-      /> */}
+      />
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
