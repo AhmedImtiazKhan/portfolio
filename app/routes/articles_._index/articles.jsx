@@ -9,186 +9,99 @@ import { Text } from '~/components/text';
 import { useReducedMotion } from 'framer-motion';
 import { useWindowSize } from '~/hooks';
 import { Link as RouterLink, useLoaderData } from '@remix-run/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { formatDate } from '~/utils/date';
 import { classes, cssProps } from '~/utils/style';
 import styles from './articles.module.css';
 
-function ArticlesPost({ slug, frontmatter, timecode, index }) {
-  const [hovered, setHovered] = useState(false);
-  const [dateTime, setDateTime] = useState(null);
-  const reduceMotion = useReducedMotion();
-  const { title, abstract, date, featured, banner } = frontmatter;
+const articles = [
+  {
+    title: 'Adding Authentication to Your Next.js App with NextAuth.js',
+    abstract: 'A step-by-step guide to implementing secure authentication in Next.js applications using NextAuth.js, covering setup, configuration, and best practices.',
+    date: '2024-03-20',
+    url: 'https://medium.com/@ahmed.imtiaz2000/adding-authentication-to-your-next-js-app-with-nextauth-js-a-step-by-step-guide-4e8057d2e099',
+    featured: true
+  },
+  {
+    title: 'How to Run DeepSeek Locally Using Ollama',
+    abstract: 'A comprehensive step-by-step guide to setting up and running DeepSeek locally with Ollama, exploring the process of local AI model deployment and usage.',
+    date: '2024-03-20',
+    url: 'https://medium.com/@ahmed.imtiaz2000/how-to-run-deepseek-locally-using-ollama-a-step-by-step-guide-14cd7b3feec5',
+    featured: false,
+    order: 1
+  },
+  {
+    title: 'Unlocking the Power of Server Actions in Next.js',
+    abstract: 'A comprehensive guide to implementing Server Actions in Next.js for simplified full-stack development, exploring how to leverage this powerful feature for better performance and developer experience.',
+    date: '2024-03-20',
+    url: 'https://medium.com/@ahmed.imtiaz2000/unlocking-the-power-of-server-actions-in-next-js-simplified-full-stack-development-b41fd393b3de',
+    featured: false,
+    order: 2
+  }
+];
 
-  useEffect(() => {
-    setDateTime(formatDate(date));
-  }, [date, dateTime]);
-
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
+function ArticleCard({ article }) {
+  const { title, abstract, date, url, featured } = article;
+  const formattedDate = formatDate(date);
 
   return (
-    <article
-      className={styles.post}
-      data-featured={!!featured}
-      style={index !== undefined ? cssProps({ delay: index * 100 + 200 }) : undefined}
-    >
-      {featured && (
-        <Text className={styles.postLabel} size="s">
-          Featured
+    <article className={styles.articleCard} data-featured={featured}>
+      <div className={styles.articleContent}>
+        <div className={styles.articleHeader}>
+          <Divider notchWidth="64px" notchHeight="8px" />
+          <Text size="s">{formattedDate}</Text>
+        </div>
+        
+        <Heading as="h2" level={featured ? 2 : 4}>
+          {title}
+        </Heading>
+        
+        <Text size={featured ? 'l' : 's'} as="p">
+          {abstract}
         </Text>
-      )}
-      {featured && !!banner && (
-        <div className={styles.postImage}>
-          <Image
-            noPauseButton
-            play={!reduceMotion ? hovered : undefined}
-            src={banner}
-            placeholder={`${banner.split('.')[0]}-placeholder.jpg`}
-            alt=""
-            role="presentation"
-          />
-        </div>
-      )}
-      <RouterLink
-        unstable_viewTransition
-        prefetch="intent"
-        to={`/articles/${slug}`}
-        className={styles.postLink}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className={styles.postDetails}>
-          <div aria-hidden className={styles.postDate}>
-            <Divider notchWidth="64px" notchHeight="8px" />
-            {dateTime}
-          </div>
-          <Heading as="h2" level={featured ? 2 : 4}>
-            {title}
-          </Heading>
-          <Text size={featured ? 'l' : 's'} as="p">
-            {abstract}
-          </Text>
-          <div className={styles.postFooter}>
-            <Button
-              secondary
-              iconHoverShift
-              icon="chevron-right"
-              as="a"
-              href="https://medium.com/@ahmed.imtiaz2000/unlocking-the-power-of-server-actions-in-next-js-simplified-full-stack-development-b41fd393b3de"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read article dont
-            </Button>
 
-            <Text className={styles.timecode} size="s">
-              {timecode}
-            </Text>
-          </div>
-        </div>
-      </RouterLink>
-      {featured && (
-        <Text aria-hidden className={styles.postTag} size="s">
-          477
-        </Text>
-      )}
-    </article>
-  );
-}
-
-function SkeletonPost({ index }) {
-  return (
-    <article
-      aria-hidden="true"
-      className={classes(styles.post, styles.skeleton)}
-      data-featured="false"
-      style={index !== undefined ? cssProps({ delay: index * 100 + 200 }) : undefined}
-    >
-      <div className={styles.postLink}>
-        <div className={styles.postDetails}>
-          <div aria-hidden className={styles.postDate}>
-            <Divider notchWidth="64px" notchHeight="8px" />
-            Coming soon...
-          </div>
-          <Heading
-            className={styles.skeletonBone}
-            as="h2"
-            level={4}
-            style={{ height: 24, width: '70%' }}
-          />
-          <Text
-            className={styles.skeletonBone}
-            size="s"
-            as="p"
-            style={{ height: 90, width: '100%' }}
-          />
-          <div className={styles.postFooter}>
-            <Button secondary iconHoverShift icon="chevron-right" as="div">
-              Read more
-            </Button>
-            <Text className={styles.timecode} size="s">
-              00:00:00:00
-            </Text>
-          </div>
-        </div>
+        <Button
+          secondary
+          iconHoverShift
+          icon="chevron-right"
+          as="a"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read on Medium
+        </Button>
       </div>
     </article>
   );
 }
 
 export function Articles() {
-  const { posts, featured } = useLoaderData();
   const { width } = useWindowSize();
-  const singleColumnWidth = 1190;
-  const isSingleColumn = width <= singleColumnWidth;
+  const isSingleColumn = width <= 1190;
 
-  const postsHeader = (
-    <header className={styles.header}>
-      <Heading className={styles.heading} level={5} as="h1">
-        <DecoderText text="Latest articles" />
-      </Heading>
-      <Barcode className={styles.barcode} />
-    </header>
-  );
-
-  const postList = (
-    <div className={styles.list}>
-      {!isSingleColumn && postsHeader}
-      {posts.map(({ slug, ...post }, index) => (
-        <ArticlesPost key={slug} slug={slug} index={index} {...post} />
-      ))}
-      {Array(2)
-        .fill()
-        .map((skeleton, index) => (
-          <SkeletonPost key={index} index={index} />
-        ))}
-    </div>
-  );
-
-  const featuredPost = <ArticlesPost {...featured} />;
+  const featuredArticle = articles.find(article => article.featured);
+  const regularArticles = articles
+    .filter(article => !article.featured)
+    .sort((a, b) => (a.order || 0) - (b.order || 0));
 
   return (
     <article className={styles.articles}>
       <Section className={styles.content}>
-        {!isSingleColumn && (
-          <div className={styles.grid}>
-            {postList}
-            {featuredPost}
+        <header className={styles.header}>
+          <Heading className={styles.heading} level={5} as="h1">
+            <DecoderText text="Latest articles" />
+          </Heading>
+        </header>
+
+        <div className={styles.grid}>
+          {featuredArticle && <ArticleCard article={featuredArticle} />}
+          <div className={styles.articleList}>
+            {regularArticles.map((article, index) => (
+              <ArticleCard key={index} article={article} />
+            ))}
           </div>
-        )}
-        {isSingleColumn && (
-          <div className={styles.grid}>
-            {postsHeader}
-            {featuredPost}
-            {postList}
-          </div>
-        )}
+        </div>
       </Section>
       <Footer />
     </article>

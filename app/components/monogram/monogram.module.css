@@ -1,7 +1,11 @@
 @layer components {
   .monogram {
-    color: var(--textTitle); /* ✅ Set color for text fill */
+    color: var(--textTitle);
     transition: color var(--durationL) ease;
+  }
+
+  .background {
+    fill: currentColor; /* 👈 Make it use the current text color */
   }
 
   .highlight {
