@@ -61,7 +61,7 @@ export const Uses = () => {
                 <List>
                   <ListItem>
                     I use{' '}
-                    <Link href="https://code.visualstudio.com/">Visual Studio Code</Link>{' '}
+                    <Link href="https://www.cursor.com/">Cursor</Link>{' '}
                     as my text editor.
                   </ListItem>
                   <ListItem>

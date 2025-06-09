@@ -1,4 +1,4 @@
-import profileImgLarge from '~/assets/profile-large.jpg';
+import profileImgLarge from '~/assets/profile-large.JPG';
 import profileImgPlaceholder from '~/assets/profile-placeholder.jpg';
 import profileImg from '~/assets/profile.jpg';
 import { Button } from '~/components/button';
@@ -21,18 +21,18 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Ahmed Imtiaz Khan, currently based in Pakistan, working as an Software Engineer
+      I'm Ahmed Imtiaz Khan, currently based in Pakistan, working as an Software Engineer
       at <Link href="https://www.teradata.com">Teradata Global Consultancy</Link>. My
       projects span across machine learning, signal processing, and intelligent systems. I
       specialize in healthcare diagnostics, industrial automation, and intelligent
       systems. I enjoy blending coding skills with problem-solving to deliver impactful
-      solutions. If you’re curious about the tools and frameworks I work with, feel free
+      solutions. If you're curious about the tools and frameworks I work with, feel free
       to check out my <Link href="/uses">uses page</Link>.
     </Text>
 
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       In my spare time, I enjoy exploring research in distributed systems, working on
-      machine learning projects, and playing video games. I’m always open to discussing
+      machine learning projects, and playing video games. I'm always open to discussing
       new ideas and collaborations, so feel free to reach out!
     </Text>
   </Fragment>
