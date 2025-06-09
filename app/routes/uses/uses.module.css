@@ -12,7 +12,7 @@
     animation: fade-in 1s ease 1s forwards;
   }
 
-  + & {
+  /* + & {
     margin-top: 0;
-  }
+  } */
 }
