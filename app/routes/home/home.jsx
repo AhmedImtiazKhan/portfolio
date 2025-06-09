@@ -146,7 +146,7 @@ export const Home = () => {
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={3}
-        title="Todolist"
+        title="AI Todolist"
         description="AI integrated todo list"
         buttonText="View project"
         buttonLink="https://cooltodolistaik.netlify.app/"
