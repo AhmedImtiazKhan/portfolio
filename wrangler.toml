@@ -1,3 +1,17 @@
-kv_namespaces = [
-  { id = "MY_KV", binding="MY_KV" }
-]
+name = "ahmedimtiazkhanportfolio"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "./build/client"
+
+[[rules]]
+type = "Data"
+globs = ["**/*.glsl"]
+fallthrough = true
+
+[[headers]]
+for = "/*"
+[headers.values]
+Cross-Origin-Embedder-Policy = "require-corp"
+Cross-Origin-Opener-Policy = "same-origin"
+Cross-Origin-Resource-Policy = "cross-origin"
