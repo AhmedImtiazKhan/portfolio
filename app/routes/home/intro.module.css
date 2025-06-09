@@ -73,6 +73,9 @@
 
 .title {
   letter-spacing: -0.03em;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .row {
@@ -80,6 +83,8 @@
   flex-direction: row;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 
   &[data-hidden='true'] {
     opacity: 0;
@@ -117,6 +122,12 @@
   color: color-mix(in lab, var(--text) 0%, transparent);
   transition: opacity 0.5s ease var(--durationM);
   isolation: isolate;
+  white-space: normal;
+
+  @media (--mediaMobile) {
+    font-size: 0.9em;
+    line-height: 1.2;
+  }
 
   &::after {
     content: '';
