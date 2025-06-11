@@ -31,8 +31,8 @@ const ProfileText = ({ visible, titleId }) => (
     </Text>
 
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time, I enjoy exploring research in distributed systems, working on
-      machine learning projects, and playing video games. I'm always open to discussing
+      In my spare time, I enjoy exploring research in software engineering, working on
+      machine learning projects, reading books and playing video games. I'm always open to discussing
       new ideas and collaborations, so feel free to reach out!
     </Text>
   </Fragment>

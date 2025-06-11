@@ -2,7 +2,7 @@ import config from '~/config.json';
 
 export const navLinks = [
   {
-    label: 'Projects',
+    label: 'Public Projects',
     pathname: '/#project-1',
   },
   {
@@ -24,12 +24,16 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  // {
-  //   label: 'Bluesky',
-  //   url: `https://bsky.app/profile/${config.bluesky}`,
-  //   icon: 'bluesky',
-  // },
- 
+  {
+    label: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/ahmed-imtiaz-khan-205a65195/',
+    icon: 'linkedin',
+  },
+  {
+    label: 'Medium',
+    url: 'https://medium.com/@ahmed.imtiaz2000',
+    icon: 'medium',
+  },
   {
     label: 'Github',
     url: `https://github.com/${config.github}`,
