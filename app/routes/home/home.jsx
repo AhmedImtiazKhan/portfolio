@@ -126,13 +126,13 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={2}
-        title="Swolley"
-        description="Gym App to make customized gym work outs."
+        title="Swolenormous - AI-Powered Fitness"
+        description="Smart workout app with AI personal trainer, intelligent exercise generation, real-time form analysis, and 24/7 chat support to help you become unbelievably swolenormous with cutting-edge AI technology."
         buttonText="View project"
         buttonLink="https://cool-gym-workout-site.netlify.app/"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Swolenormous AI-powered fitness app',
           textures: [
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,

@@ -27,7 +27,7 @@ export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => 
         <g clipPath={`url(#${clipId})`}>
           <rect className={styles.highlight} width="100%" height="100%" />
         </g>
-      )}AV
+      )}
     </svg>
   );
 });
