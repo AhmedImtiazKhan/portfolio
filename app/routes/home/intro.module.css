@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .text {
@@ -11,6 +12,7 @@
   width: 100%;
   position: relative;
   top: calc(var(--spaceL) * -1);
+  flex-wrap: wrap;
 
   @media (--mediaDesktop) {
     max-width: 920px;
@@ -76,6 +78,7 @@
   max-width: 100%;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  flex-wrap: wrap;
 }
 
 .row {
@@ -129,6 +132,7 @@
   transition: opacity 0.5s ease var(--durationM);
   isolation: isolate;
   white-space: normal;
+  flex-wrap: wrap;
 
   @media (--mediaMobile) {
     font-size: 0.9em;
