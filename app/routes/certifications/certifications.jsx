@@ -55,7 +55,7 @@ export const Certifications = () => {
                 <Heading level={4}>Google Cloud</Heading>
                 <Text>Associate Cloud Engineer Certification</Text>
                 <Text className={styles.date}>Issued: August 2024 · Expires August 2027</Text>
-                <Text className={styles.credential}>Credential ID: eca89ed12a0c489c8ac1e4a6b3fd53da</Text>
+                <Text className={styles.credential}>Credential ID:<br />eca89ed12a0c489c8ac1e4a6b3fd53da</Text>
                 <Text className={styles.skills}>Skills: Cloud Infrastructure, GCP services, Deployment</Text>
                 <Button
                   className={styles.button}
@@ -78,7 +78,7 @@ export const Certifications = () => {
                 <Heading level={4}>Microsoft Azure</Heading>
                 <Text>Microsoft Certified: Azure Fundamentals</Text>
                 <Text className={styles.date}>Issued: November 2023</Text>
-                <Text className={styles.credential}>Credential ID: FF8FD22D5975AC41</Text>
+                <Text className={styles.credential}>Credential ID:<br />FF8FD22D5975AC41</Text>
                 <Text className={styles.skills}>Skills: Cloud Computing, Azure Basics</Text>
                 <Button
                   className={styles.button}
@@ -102,7 +102,7 @@ export const Certifications = () => {
                 <Heading level={4}>Udemy</Heading>
                 <Text>React - The Complete Guide</Text>
                 <Text className={styles.date}>Issued: August 2022</Text>
-                <Text className={styles.credential}>Credential ID: UC-65405eae-811a-4ece-ae33-07a8edce5c77</Text>
+                <Text className={styles.credential}>Credential ID:<br />UC-65405eae-811a-4ece-ae33-07a8edce5c77</Text>
                 <Text className={styles.skills}>Skills: React, Frontend Development, State Management</Text>
                 <Button
                   className={styles.button}
@@ -125,7 +125,7 @@ export const Certifications = () => {
                 <Heading level={4}>Udemy</Heading>
                 <Text>The Complete Web Developer in 2022: Zero to Mastery</Text>
                 <Text className={styles.date}>Issued: August 2022</Text>
-                <Text className={styles.credential}>Credential ID: UC-3a6d1703-9691-4a34-8aed-658df6a9f793</Text>
+                <Text className={styles.credential}>Credential ID:<br />UC-3a6d1703-9691-4a34-8aed-658df6a9f793</Text>
                 <Text className={styles.skills}>Skills: Full-stack Web Development, JavaScript, Backend & Frontend</Text>
                 <Button
                   className={styles.button}
@@ -149,7 +149,7 @@ export const Certifications = () => {
                 <Heading level={4}>Teradata</Heading>
                 <Text>Vantage Data Engineering</Text>
                 <Text className={styles.date}>Issued: August 2024</Text>
-                <Text className={styles.credential}>Credential ID: 014d5fd25cee41f08eb367376614d711</Text>
+                <Text className={styles.credential}>Credential ID:<br />014d5fd25cee41f08eb367376614d711</Text>
                 <Text className={styles.skills}>Skills: Data Engineering, Data Processing</Text>
                 <Button
                   className={styles.button}
@@ -173,6 +173,7 @@ export const Certifications = () => {
                 <Text>Vantage Associate 2.3 Certification</Text>
                 <Text className={styles.date}>Issued: October 2023</Text>
                 <Text className={styles.skills}>Skills: Data Warehouse Architecture, Data Distribution</Text>
+                <Text className={styles.credential}>Credential ID:<br />3903e8c8-2476-4f95-8be1-82d6c5fa9795</Text>
                 <Button
                   className={styles.button}
                   data-status={status}
@@ -195,6 +196,7 @@ export const Certifications = () => {
                 <Heading level={4}>HackerRank</Heading>
                 <Text>JavaScript Certification</Text>
                 <Text className={styles.skills}>Skills: JavaScript proficiency, coding challenges</Text>
+                <Text className={styles.credential}>Credential ID:<br />a8869a6af9c3</Text>
                 <Button
                   className={styles.button}
                   data-status={status}
