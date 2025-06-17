@@ -108,6 +108,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spaceM);
+  flex-wrap: wrap;
 
   @media (--mediaUseMotion) {
     transform: translate3d(0, var(--space3XL), 0);
@@ -147,6 +148,9 @@
   color: var(--textLight);
   margin-top: var(--spaceS);
   font-size: var(--fontSizeS);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
 }
 
 .credential {
@@ -157,6 +161,9 @@
   padding: var(--spaceS) var(--spaceM);
   border-radius: var(--borderRadius);
   margin: var(--spaceS) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
 }
 
 .skills {
@@ -165,6 +172,9 @@
   margin-top: var(--spaceM);
   padding-top: var(--spaceM);
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
 }
 
 .button {

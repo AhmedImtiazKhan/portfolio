@@ -22,7 +22,8 @@ export const Certifications = () => {
   const initDelay = tokens.base.durationS;
 
   return (
-    <Section className={styles.certifications}>
+    <Section className={styles.certifications} style={{ display: 'flex', flexWrap: 'wrap' }}>
+
       <Transition unmount in timeout={1600}>
         {({ status, nodeRef }) => (
           <div className={styles.content} ref={nodeRef}>
@@ -41,7 +42,7 @@ export const Certifications = () => {
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
             
-            <div className={styles.certificationGrid}>
+            <div className={styles.certificationGrid} style={{ display: 'flex', flexWrap: 'wrap' }}>
               {/* Cloud Certifications */}
               <div className={styles.certificationCard} data-status={status}>
                 <div className={styles.logoContainer}>
